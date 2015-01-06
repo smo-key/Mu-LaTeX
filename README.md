@@ -1,13 +1,10 @@
-# Mu - a fast, streaming Node.js Mustache engine
+# Mutex - a fast, streaming Node.js Mustache engine *optimized for TeX*
 
-Warning: This version is not API compatible with 0.1.
+## Differences from Mustache API
 
-## Install
-
-I have had some issues with my npm auth and got it in a bit of a rut, so for
-now you have to:
-
-    npm install mu2
+- Delimiter defaults changed from `{{ }}` to `<% %>` to avoid awkwardness
+- Triple Mu tags (`{{{ }}}`) disabled as there is no need to convert to HTML
+- Normal Mu tags `<% %>` escape text for LaTeX compatibility rather than HTML
 
 ## Issues
 
@@ -17,7 +14,7 @@ Currently mu does not support changing the tag form ({{ }} to say <% %>).
 
 There are a few ways to use mu 0.5. Here is the simplest:
 ```javascript
-var mu = require('mu2'); // notice the "2" which matches the npm repo, sorry..
+var mu = require('mutex'); // notice the "2" which matches the npm repo, sorry..
 
 mu.root = __dirname + '/templates'
 mu.compileAndRender('index.html', {name: "john"})
@@ -45,7 +42,7 @@ in development mode (so the changes are immediately reflected).
 ```javascript
 var http = require('http')
   , util = require('util')
-  , mu   = require('mu2');
+  , mu   = require('mutex');
 
 mu.root = __dirname + '/templates';
 
