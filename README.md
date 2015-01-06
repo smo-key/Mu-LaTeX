@@ -2,13 +2,27 @@
 
 ## Differences from Mustache API
 
-- Delimiter defaults changed from `{{ }}` to `<% %>` to avoid awkwardness
+- Delimiter defaults changed from `{{ }}` to `<! !>` to avoid awkwardness
 - Triple Mu tags (`{{{ }}}`) disabled as there is no need to convert to HTML
 - Normal Mu tags `<% %>` escape text for LaTeX compatibility rather than HTML
+- An `\input{nameoftemplate}` acts the same way that a partial (`{{< nameoftemplate }}`) does
+- The `#` (if / iterate) command replaced with `*` to avoid problems
+- The `^` (not) command replaced with `~` to avoid problems
 
-## Issues
-
-Currently mu does not support changing the tag form ({{ }} to say <% %>).
+#### Why don't you just use `<% %>` for the delimiters?
+Because I want to do something like this:
+``` tex
+\renewcommand{\title}{<% title %>}
+\renewcommand{\today}{<% today %>}
+\renewcommand{\currentpart}{Revision <% revision %>}
+```
+Which, as you can see, causes a loss of some of the important `}` signs that we need if we want to compile the documents in some *normal* way.  It's easier to just avoid the nasty syntax and use something like this:
+``` tex
+\renewcommand{\title}{<! title !>}
+\renewcommand{\today}{<! today !>}
+\renewcommand{\currentpart}{Revision <! revision !>}
+```
+Renders just fine no matter whether you're using TeXstudio or emacs to write your TeX, or Node to publish.
 
 ## Usage
 
