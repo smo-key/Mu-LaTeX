@@ -1,4 +1,4 @@
-# Mutex - a fast, streaming Node.js Mustache engine *optimized for TeX*
+# MuTeX - a fast, streaming Node.js Mustache engine *optimized for TeX*
 
 ## Differences from Mustache API
 
