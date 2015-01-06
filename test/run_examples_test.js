@@ -24,8 +24,7 @@ mu.root = path.join(__dirname, 'examples');
   'simple',
   'dot_notation',
   'twice',
-  'two_in_a_row',
-  'unescaped'
+  'two_in_a_row'
 ].forEach(function (name) {
   var js   = fs.readFileSync(path.join(mu.root, name + '.js')).toString(),
       text = fs.readFileSync(path.join(mu.root, name + '.txt')).toString();
