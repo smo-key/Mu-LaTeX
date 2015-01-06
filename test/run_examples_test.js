@@ -1,7 +1,7 @@
 var assert = require('assert'),
     fs     = require('fs'),
     path   = require('path'),
-    mu     = require('../lib/mu');
+    mu     = require('../lib/mu')
 
 mu.root = path.join(__dirname, 'examples');
 
@@ -13,7 +13,6 @@ mu.root = path.join(__dirname, 'examples');
   'complex',
   'date',
   'deep_partial',
-  // 'delimiters',
   'error_not_found',
   'escaped',
   'hash_instead_of_array',
@@ -37,7 +36,7 @@ mu.root = path.join(__dirname, 'examples');
     .on('data', function (c) { buffer += c.toString(); })
     .on('end', function () {
       console.log("Testing: " + name);
-      assert.equal(buffer, text);
+      assert.equal(buffer.replace(/\s/g,""), text.replace(/\s/g,""));
       console.log(name + ' passed\n');
     });
     

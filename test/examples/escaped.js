@@ -1,5 +1,5 @@
 {
   title: function() {
-    return "Bear > Shark";
+    return "{{ Tags }} alwa*s s^^ color$ and tild~& with \\.";
   }
 }
