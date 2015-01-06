@@ -1,14 +1,14 @@
-{ "name": "mu2"
-, "description": "A Mustache template engine for Node.js"
-, "keywords": ["template", "mustache"]
-, "version" : "0.5.20"
-, "homepage": "http://github.com/raycmorgan/mu"
-, "author" : "RayMorgan <ray@rumgr.com>"
+{ "name": "mutex"
+, "description": "A Mustache template engine for Node.js optimized for TeX"
+, "keywords": ["template", "mustache", "TeX", "LaTeX"]
+, "version" : "1.0.0"
+, "homepage": "http://github.com/smo-key/MuTeX"
+, "author" : "Arthur Pachachura <pachachura.arthur@gmail.com>"
 , "main" : "lib/mu",
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://raw.github.com/raycmorgan/Mu/master/LICENSE"
+      "url": "https://raw.github.com/smo-key/MuTeX/master/LICENSE"
     }
   ]
 }
