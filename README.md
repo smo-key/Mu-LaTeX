@@ -4,8 +4,8 @@
 
 - Delimiter defaults changed from `{{ }}` to `<! !>` to avoid awkwardness
 - Triple Mu tags (`{{{ }}}`) disabled as there is no need to convert to HTML
-- Normal Mu tags `<% %>` escape text for LaTeX compatibility rather than HTML
-- An `\input{nameoftemplate}` acts the same way that a partial (`{{< nameoftemplate }}`) does
+- Normal Mu tags `<! !>` escape text for LaTeX compatibility rather than HTML
+- An `\input{nameoftemplate}` acts the same way that a partial (`{{> nameoftemplate }}`) does
 - The `#` (if / iterate) command replaced with `*` to avoid problems
 - The `^` (not) command replaced with `~` to avoid problems
 
@@ -16,7 +16,7 @@ Because I want to do something like this:
 \renewcommand{\today}{<% today %>}
 \renewcommand{\currentpart}{Revision <% revision %>}
 ```
-Which, as you can see, causes a loss of some of the important `}` signs that we need if we want to compile the documents in some *normal* way.  It's easier to just avoid the nasty syntax and use something like this:
+Which (if you look at the gray regions) causes a loss of some of the important `}` signs that we need if we want to compile the documents in some *normal* way.  It's easier to just avoid the nasty syntax and use something like this:
 ``` tex
 \renewcommand{\title}{<! title !>}
 \renewcommand{\today}{<! today !>}
