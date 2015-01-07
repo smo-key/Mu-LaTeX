@@ -18,6 +18,7 @@ mu.root = path.join(__dirname, 'examples');
   'hash_instead_of_array',
   'inverted',
   'partial',
+  'latexpartial',
   'recursion_with_same_names',
   'reuse_of_enumerables',
   'simple',
