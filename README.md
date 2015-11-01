@@ -3,8 +3,8 @@
 ## Differences from Mustache API
 
 - Delimiter defaults changed from `{{ }}` to `<! !>` to avoid awkwardness
-- Triple Mu tags (`{{{ }}}`) disabled as there is no need to convert to HTML
 - Normal Mu tags `<! !>` escape text for LaTeX compatibility rather than HTML
+- Triple Mu tags (`{{{ }}}`) replaced with `<!& !>` and unescape text rather than escape to HTML
 - An `\input{nameoftemplate}` acts the same way that a partial (`{{> nameoftemplate }}`) does
 - The `#` (if / iterate) command replaced with `*` to avoid problems
 - The `^` (not) command replaced with `~` to avoid problems
