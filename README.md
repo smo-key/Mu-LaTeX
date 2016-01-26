@@ -1,5 +1,6 @@
 # MuTeX - a fast, streaming Node.js Mustache engine *optimized for TeX*
 
+
 ## Differences from Mustache API
 
 - Delimiter defaults changed from `{{ }}` to `<! !>` to avoid awkwardness
